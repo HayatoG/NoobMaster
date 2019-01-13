@@ -62,7 +62,7 @@ then
         source "$PWD/op_Fastboot.sh"
 
 elif [ $Number -eq 3 ]
-        then
+then
         for i in $(seq 3)
         do
                 sleep 1
@@ -75,7 +75,7 @@ elif [ $Number -eq 3 ]
         source "$PWD/op_Fastboot.sh"
 
 elif [ $Number -eq 4 ]
-        then
+then
         for i in $(seq 3)
         do
                 sleep 1
@@ -84,5 +84,44 @@ elif [ $Number -eq 4 ]
 
         clear
         source "$PWD/op_Twrpj.sh"
+
+elif [ $Number -eq 5 ]
+then
+        for i in $(seq 3)
+        do
+                sleep 1
+                echo "."
+        done
+
+        clear
+        fastboot oem edl
+
+        read -n1 -r -p "Pressione alguma tecla para sair ... " key
+        clear
+        source "$PWD/op_Fastboot.sh"
+
+
+elif [ $Number -eq 6 ]
+then
+        for i in $(seq 3)
+        do
+                sleep 1
+                echo "."
+        done
+
+        clear
+        source "$PWD/op_FlashStock.sh"
+        
+
+elif [ $Number -eq 0 ]
+then
+        for i in $(seq 3)
+        do
+                sleep 1
+                echo "."
+        done
+
+        clear
+        source "$PWD/noob.sh"
 
 fi
