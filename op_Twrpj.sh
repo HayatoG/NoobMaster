@@ -20,7 +20,7 @@ echo "                 1 - Twrp Jasmine"
 echo ""
 echo "                 2 - Twrp Wayne"
 echo ""
-echo "                 e - Voltar"
+echo "                 0 - Voltar"
 echo ""
 
 echo "Digite um número e tecle ENTER: "
@@ -41,6 +41,7 @@ then
 	source "$PWD/op_Twrpj.sh"
 
 elif [ $Number	-eq 2 ]
+then
 
 	for i in $(seq 3)
     do
@@ -55,11 +56,11 @@ elif [ $Number	-eq 2 ]
 
 elif [ $Number -eq 0 ]
 then
-
-	for i in $(seq 3)
+    
+    for i in $(seq 3)
     do
-            sleep 1
-            echo "."
+        sleep 1
+        echo "."
     done
 
     clear

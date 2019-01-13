@@ -94,7 +94,12 @@ then
         done
 
         clear
-        source "$PWD/op_EDL.sh"
+        fastboot oem edl
+
+        read -n1 -r -p "Pressione alguma tecla para sair ... " key
+        clear
+        source "$PWD/op_Fastboot.sh"
+
 
 elif [ $Number -eq 6 ]
 then
@@ -106,6 +111,7 @@ then
 
         clear
         source "$PWD/op_FlashStock.sh"
+        
 
 elif [ $Number -eq 0 ]
 then
